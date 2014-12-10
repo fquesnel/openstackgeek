@@ -165,15 +165,15 @@ admin_password = $password
 " > /etc/nova/nova.conf
 
 # restart nova
-service nova-api restart
-service nova-cert restart
-service nova-api restart
-service nova-conductor restart
-service nova-consoleauth restart
-service nova-network restart
-service nova-compute restart
-service nova-novncproxy restart
-service nova-scheduler restart
+service nova-api stop
+service nova-cert stop
+service nova-api stop
+service nova-conductor stop
+service nova-consoleauth stop
+service nova-network stop
+service nova-compute stop
+service nova-novncproxy stop
+service nova-scheduler stop
 sleep 4
 
 # sync db
@@ -181,15 +181,15 @@ nova-manage db sync
 sleep 4
 
 # restart nova
-service nova-api restart
-service nova-cert restart
-service nova-api restart
-service nova-conductor restart
-service nova-consoleauth restart
-service nova-network restart
-service nova-compute restart
-service nova-novncproxy restart
-service nova-scheduler restart
+service nova-api start
+service nova-cert start
+service nova-api start
+service nova-conductor start
+service nova-consoleauth start
+service nova-network start
+service nova-compute start
+service nova-novncproxy start
+service nova-scheduler start
 
 echo;
 echo "###################################################################################################"
