@@ -35,9 +35,7 @@ echo "##########################################################################
 echo;
 
 # grab our IP 
-read -p "Enter the device name for this rig's NIC (eth0, etc.) : " rignic
-
-rigip=$(/sbin/ifconfig $rignic| sed -n 's/.*inet *addr:\([0-9\.]*\).*/\1/p')
+read -p "Enter the rig's ip address: " rigip
 
 echo;
 echo "#################################################################################################################"
